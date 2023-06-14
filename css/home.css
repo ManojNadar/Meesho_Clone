@@ -119,15 +119,68 @@ header {
   /* border: 1px solid red; */
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  /* align-items: center; */
+  /* border-bottom: 1px solid red; */
   text-align: center;
-  /* padding: 1% 0 0 2%; */
+  padding-top: 2.5%;
 }
-#profile-container > #profile > a > p {
-  padding-top: 10%;
+
+/* profile-dropDown */
+
+#profile-dropDown {
+  width: 15%;
+  height: 150px;
+  border: 1px solid rgb(212, 211, 211);
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  z-index: 9999;
+  display: none;
 }
-#profile-container > #cart > a > p {
-  padding-top: 10%;
+
+#user {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding: 5%;
+}
+
+#user-details {
+  font-size: 0.9em;
+  padding-left: 10%;
+}
+
+#orders {
+  width: 90%;
+  padding: 7%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+#orders > h4 {
+  padding-left: 10%;
+}
+
+#logout {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 5%;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+#logout > i {
+  padding-left: 3%;
+}
+#logout > h4 {
+  padding-left: 10%;
 }
 
 /* second navbar */
@@ -138,7 +191,7 @@ nav {
   position: fixed;
   top: 10.2%;
   background-color: rgb(255, 255, 255);
-  z-index: 9999;
+  z-index: 999;
 }
 
 #sec-nav-container {
@@ -575,7 +628,7 @@ footer {
 }
 
 #footer-container {
-  width: 90%;
+  width: 95%;
   /* border: 1px solid orange; */
   margin: auto;
   display: flex;
@@ -670,8 +723,6 @@ footer {
 #foot-5 > h3 {
   padding: 5% 0;
 }
-#foot-5 > div {
-  padding: 5% 0;
-  color: darkgray;
-  font-weight: 500;
+#foot-5 > div > p {
+  color: rgb(109, 109, 109);
 }

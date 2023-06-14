@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="../css/home.css" />
 
+    <script src="../js/home.js"></script>
+
     <script
       src="https://kit.fontawesome.com/cad84b7595.js"
       crossorigin="anonymous"
@@ -47,6 +49,24 @@
                   <i class="fa-solid fa-user fa-sm" style="color: #828283"></i>
                   <p>Profile</p>
                 </a>
+              </div>
+              <!-- profile dropDown -->
+              <div id="profile-dropDown">
+                <div id="user">
+                  <i class="fa-solid fa-circle-user fa-2xl"></i>
+                  <div id="user-details">
+                    <p>Hello User</p>
+                    <p>659874212</p>
+                  </div>
+                </div>
+                <div id="orders">
+                  <i class="fa-solid fa-bag-shopping fa-xl"></i>
+                  <h4>My Orders</h4>
+                </div>
+                <div id="logout">
+                  <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                  <h4>Logout</h4>
+                </div>
               </div>
               <div id="cart">
                 <a href="">
@@ -790,7 +810,7 @@
           </div>
         </div>
 
-        <div id="last-banner"></div>
+        <!-- <div id="last-banner"></div> -->
       </main>
 
       <footer>
@@ -879,6 +899,28 @@
           </div>
         </div>
       </footer>
+
+      <script>
+        // let profile = document.getElementById("profile");
+        // let profile_dropDown = document.getElementById("profile-dropDown");
+
+        // profile.addEventListener("mouseover", function () {
+        //   profile.style.borderBottom = "2px solid red";
+        //   profile_dropDown.style.display = "block";
+        // });
+        // profile.addEventListener("mouseleave", function () {
+        //   profile.style.borderBottom = "none";
+        //   profile_dropDown.style.display = "none";
+        // });
+        // profile_dropDown.addEventListener("mouseover", function () {
+        //   profile.style.borderBottom = "2px solid red";
+        //   profile_dropDown.style.display = "block";
+        // });
+        // profile_dropDown.addEventListener("mouseleave", function () {
+        //   profile.style.borderBottom = "none";
+        //   profile_dropDown.style.display = "none";
+        // });
+      </script>
     </div>
   </body>
 </html>
