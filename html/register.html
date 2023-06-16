@@ -11,6 +11,8 @@
       src="https://kit.fontawesome.com/cad84b7595.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="../js/register.js"></script>
   </head>
   <body>
     <div id="screen">
@@ -60,21 +62,42 @@
             <div id="login-details">
               <h2>Sign Up to view your profile</h2>
 
-              <div id="login-input-container">
-                <label> Name </label> <br />
-                <input type="text" placeholder="Enter your email" /> <br />
-                <label> Email </label> <br />
-                <input type="email" placeholder="Enter your email" /> <br />
-                <label> Password </label> <br />
-                <input type="password" placeholder="**********" /> <br />
-                <label>Confirm password</label> <br />
-                <input type="password" placeholder="**********" />
-                <br />
-              </div>
+              <form onsubmit="registerForm(event)">
+                <div id="login-input-container">
+                  <label> Name </label> <br />
+                  <input
+                    id="userName"
+                    type="text"
+                    placeholder="Enter your email"
+                  />
+                  <br />
+                  <label> Email </label> <br />
+                  <input
+                    id="userEmail"
+                    type="email"
+                    placeholder="Enter your email"
+                  />
+                  <br />
+                  <label> Password </label> <br />
+                  <input
+                    id="userPassword"
+                    type="password"
+                    placeholder="**********"
+                  />
+                  <br />
+                  <label>Confirm password</label> <br />
+                  <input
+                    id="userConfirmPassword"
+                    type="password"
+                    placeholder="**********"
+                  />
+                  <br />
+                </div>
 
-              <div id="login-btn">
-                <button>Login</button>
-              </div>
+                <div id="login-btn">
+                  <button>Register</button>
+                </div>
+              </form>
 
               <div id="new-account">
                 <p>New to Meesho ? <a href="./login.html">Login Here</a></p>
