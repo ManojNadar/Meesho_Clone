@@ -35,7 +35,7 @@ window.onload = () => {
   } else {
     let logInStructure = `<Button id="logIn" onclick="logIn()">LogIn</Button>`;
     logsBtn.innerHTML = logInStructure;
-    window.location.href = "../html/login.html";
+    // window.location.href = "../html/login.html";
   }
 };
 
