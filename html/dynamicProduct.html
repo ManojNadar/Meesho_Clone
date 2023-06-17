@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product form</title>
+</head>
+<body>
+    <form onsubmit="addProduct(event)">
+        <label>Product name</label><br />
+        <input id="productName" type="text" placeholder="enter product name" /><br /><br />
+        <label>Product price</label><br />
+        <input id="productPrice" type="text" placeholder="enter product price" /><br /><br />
+        <label>Product image</label><br />
+        <input id="productImage" type="text" placeholder="enter product image" /><br /><br />
+        <label>Product reviews</label><br />
+        <input id="productReview" type="text" placeholder="enter product review" /><br /><br />
+        <input type="submit" value="register" /><br />
+    </form>
+
+
+    <script>
+        function addProduct(event){
+            event.preventDefault();
+
+            let productName = document.getElementById("productName").value;
+            let productPrice = document.getElementById("productPrice").value;
+            let productImage = document.getElementById("productImage").value;
+            let productReview = document.getElementById("productReview").value;
+
+            let product_object = {productName, productPrice, productImage, productReview};
+
+            let product_storage = JSON.parse(localStorage.getItem("productList")) || [];
+
+            product_storage.push(product_object);
+            localStorage.setItem("productList", JSON.stringify(product_storage));
+
+            alert("Product added.");
+
+        }
+    </script>
+</body>
+</html>

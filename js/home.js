@@ -35,8 +35,43 @@ window.onload = () => {
   } else {
     let logInStructure = `<Button id="logIn" onclick="logIn()">LogIn</Button>`;
     logsBtn.innerHTML = logInStructure;
-    // window.location.href = "../html/login.html";
+    window.location.href = "../html/login.html";
   }
+
+  //dynamically added products
+  let productDiv = document.getElementById("main-right-inside");
+  let productStorage = JSON.parse(localStorage.getItem("productList"));
+
+  let productDisplayString = "";
+
+  for (let i = 0; i < productStorage.length; i++) {
+    productDisplayString += `<div
+     class="main-right-images">
+    <div class="single-image">
+      <img
+        src="${productStorage[i].productImage}"
+        alt=""
+      />
+    </div>
+
+    <div class="image-details">
+      <p class="image-detail-1">${productStorage[i].productName}</p>
+      <h4>₹ ${productStorage[i].productPrice} <span class="image-detail-2">onwards</span></h4>
+      <small
+        >Delivery ₹61 <span class="word-line">₹70</span>
+      </small>
+
+      <div class="ratings">
+        <p class="star">
+          4.0 <i class="fa-regular fa-star fa-xs"></i>
+        </p>
+        <span class="reviews"> ${productStorage[i].productReview} Reveiws </span>
+      </div>
+    </div>
+  </div>`;
+  }
+
+  productDiv.innerHTML = productDisplayString;
 };
 
 function logout() {
